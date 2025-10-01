@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+  --primary:#3067CF;   /* encabezados/links/navbar */
+  --secondary:#4930CF; /* botones/CTAs */
+  --accent:#CF9830;    /* micro-acentos (badges/hover/ok) */
+
+  --g800:#1F2937;
+  --g100:#F3F4F6;
+  --white:#fff;
+}
+
+html{ scroll-behavior: smooth; }
+body{ color:var(--g800); background:var(--white); }
+
+.navbar{ background:var(--primary); }
+a, .link-primary{ color:var(--primary); }
+
+.btn-secondary{
+  background:var(--secondary);
+  color:#fff;
+}
+.btn-secondary:hover{ filter:brightness(.92); }
+
+.badge-accent{
+  background:var(--accent);
+  color:var(--g800);
+}
+
+.section{ padding:4rem 0; }
+.card{ background:var(--g100); border:0; }
