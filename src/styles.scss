@@ -1,29 +1,32 @@
-:root{
-  --primary:#3067CF;   /* encabezados/links/navbar */
-  --secondary:#4930CF; /* botones/CTAs */
-  --accent:#CF9830;    /* micro-acentos (badges/hover/ok) */
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
+
+/* ===== Global / paleta ===== */
+:root{
+  --blue:#3067CF;   /* primario */
+  --indigo:#4930CF; /* secundario */
+  --gold:#CF9830;   /* acento */
   --g800:#1F2937;
   --g100:#F3F4F6;
   --white:#fff;
 }
-
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior:smooth; }
 body{ color:var(--g800); background:var(--white); }
 
-.navbar{ background:var(--primary); }
-a, .link-primary{ color:var(--primary); }
-
-.btn-secondary{
-  background:var(--secondary);
-  color:#fff;
+/* Navbar base para todo el sitio */
+.navbar{
+  background:linear-gradient(90deg,var(--blue),var(--indigo));
+  transition:all .25s ease;
 }
-.btn-secondary:hover{ filter:brightness(.92); }
+.navbar.shrink{ box-shadow:0 6px 16px rgba(0,0,0,.1); padding-top:.25rem; padding-bottom:.25rem; }
 
-.badge-accent{
-  background:var(--accent);
-  color:var(--g800);
-}
-
+/* Utilidades globales */
 .section{ padding:4rem 0; }
-.card{ background:var(--g100); border:0; }
+.maxw-800{ max-width:800px; margin-inline:auto; }
+
+/* Footer global */
+.footer{ background:var(--g100); }
+
+/* Badges globales que usa tu template */
+.badge.year{ background:var(--indigo); }
+.badge.tech{ background:rgba(48,103,207,.12); color:var(--blue); border:1px solid rgba(48,103,207,.35); }

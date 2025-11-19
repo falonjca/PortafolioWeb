@@ -1,66 +1,169 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#top">Falon Carmona</a>
+    <a class="navbar-brand fw-bold" href="#top">{{ nombre }}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="nav" class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a href="#contacto" class="nav-link btn btn-secondary ms-lg-3 px-3">Contacto</a>
-        </li>
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+         <div class="d-flex align-items-center gap-3 socials">
+          <a class="bi bi-envelope" title="Email" href="mailto:faloncarmona@gmail.com"></a>
+          <a class="bi bi-github" title="GitHub" target="_blank" rel="noopener"
+             href="https://github.com/falonjca"></a>
+          <a class="bi bi-linkedin" title="LinkedIn" target="_blank" rel="noopener" href="#"></a>
+          <a class="bi bi-whatsapp" title="WhatsApp" target="_blank" rel="noopener"
+             href="https://wa.me/50688555768"></a>
+        </div>
+
+        <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="#contacto" class="nav-link btn btn-teal ms-lg-3 px-3">Contacto</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <main id="top">
-  <!-- INICIO -->
-  <section id="inicio" class="text-center section">
-    <div class="container">
-      <h1 class="display-5 fw-bold mb-3">Diseño centrado en ciudadanía</h1>
-      <p class="lead mb-4">xxxxxx</p>
-      <a href="#proyectos" class="btn btn-lg btn-secondary">Mis proyectos</a>
-    </div>
-  </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="section">
-    <div class="container">
-      <h2 class="mb-4">Proyectos</h2>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="card p-4 h-100">
-            <h5>Proyecto 1</h5>
-            <p>xxxxxxx</p>
-            <span class="badge badge-accent">xxxxxx</span>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card p-4 h-100">
-            <h5>Proyecto 2</h5>
-            <p>xxxxxxxx</p>
-            <span class="badge badge-accent">xxxxxxx</span>
-          </div>
+  <div> 
+    <img src="assets/slogan-portafolio.svg" alt="Slogan" class="slogan-inline" />
+  </div>
+ 
+<!-- HERO --> 
+ <section id="inicio" class="hero section"> <div class="container"> <div class="row align-items-center g-4"> 
+  <!-- Texto --> 
+
+   <div class="col-lg-7 order-2 order-lg-1"> 
+      <h1 class="display-5 fw-bold mb-2 d-flex align-items-center gap-3 flex-wrap">
+        <span>Hola, soy <span class="mark">Falon Carmona</span></span>
+      </h1>
+      <span class="fade-80 fs-4 d-block">Ingeniera en software</span>
+      <p class="lead fade-80 mb-4 maxw-600"> Especializada en backend y metodologías ágiles. Diseño y mejoro soluciones empresariales para gobierno con <strong>calidad, seguridad y trazabilidad</strong>. </p> 
+      
+      <div class="d-flex flex-wrap gap-3 mb-4">
+       <a class="btn btn-primary btn-lg" href="assets/Cv-espanol.pdf" download>
+          <i class="bi bi-download me-2"></i> Descargar CV (Español)
+        </a>
+
+        <a class="btn btn-outline-dark btn-lg" href="assets/Cv-english.pdf" download>
+          <i class="bi bi-download me-2"></i> Download CV (English)
+      </a>
+    </div>
+
+    </div>
+
+      <!-- Foto -->
+      <div class="col-lg-5 order-1 order-lg-2 text-center">
+        <div class="photo-wrap">
+          <img src="assets/falon-foto.jpg" alt="Falon Carmona" class="photo" />
+          <span class="orb orb-1"></span>
+          <span class="orb orb-2"></span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+<!-- STATS-->
+<section id="stats" class="stats-band">
+  <div class="container-fluid px-0">
+    <div class="row g-0 text-center justify-content-center">
+      <div class="col-12 col-md-4 col-lg-3 p-4">
+        <div class="stat stat-bleed">
+          <div class="n">Orientación</div>
+          <div class="t">al usuario</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 p-4">
+        <div class="stat stat-bleed">
+          <div class="n">Inclusión</div>
+          <div class="t">y accesibilidad</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-3 p-4">
+        <div class="stat stat-bleed">
+          <div class="n">Ética</div>
+          <div class="t">pública</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MICROINTERACCION -->
+<section class="section">
+  <div class="container d-flex flex-column align-items-center" style="max-width: 720px">
+    <!-- Microinteracción #1: automática con <lottie-player> -->
+    <lottie-player
+      src="https://lottie.host/a4cfbb30-b0f0-4c7f-a078-f482fd9e3543/xLCrHGbxWt.json"
+      autoplay
+      style="width: 100%; max-width: 600px">
+    </lottie-player>
+  </div>
+</section>
+
+
+
+  <!-- PROYECTOS -->
+ <section id="proyectos" class="section">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h2 class="m-0">Proyectos</h2>
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-dark btn-sm" (click)="scrollCarousel('prev')" aria-label="Anterior">
+          ‹
+        </button>
+        <button class="btn btn-outline-dark btn-sm" (click)="scrollCarousel('next')" aria-label="Siguiente">
+          ›
+        </button>
+      </div>
+    </div>
+
+    <div id="projTrack" class="proj-track" role="region" aria-label="Carrusel de proyectos">
+      <article class="proj-item card p-4 lift" *ngFor="let p of projects">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <h5 class="mb-0">{{ p.title }}</h5>
+          <span class="badge year">{{ p.year }}</span>
+        </div>
+        <p class="mb-3">{{ p.desc }}</p>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="badge tech" *ngFor="let t of p.tech">{{ t }}</span>
+        </div>
+        <a class="link-primary" [href]="p.link">Saber más →</a>
+      </article>
+    </div>
+  </div>
+</section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="section">
+  <section id="contacto" class="section reveal">
     <div class="container">
+
+      <img src="assets/logo-portafolio.svg" alt="Logo Falon Carmona"  class="logo-inline" />
+      
       <h2 class="mb-3">Contacto</h2>
-      <p class="mb-1">Correo:
-        <a class="link-primary" href="mailto:faloncarmona@gmail.com">faloncarmona@gmail.com</a>
-      </p>
-      <p class="mb-0">WhastApp:
-        <a class="link-primary" target="_blank" href="88555768">8855-5768</a>
-      </p>
+
+      <ul class="list-unstyled mb-0">
+        <li class="mb-1">
+          ✉ <a class="link-primary" href="mailto:faloncarmona@gmail.com?subject=Consulta%20Portafolio">
+            faloncarmona@gmail.com</a>
+        </li>
+        <li class="mb-1">
+          💬 <a class="link-primary" target="_blank" rel="noopener"
+               href="https://wa.me/50688555768?text=Hola%20Falon%2C%20vi%20tu%20portafolio">
+            WhatsApp: +506 8855-5768</a>
+        </li>
+        <li>🔗 <a class="link-primary" href="https://falonjca.github.io/PortafolioWeb/" target="_blank" rel="noopener">
+            Portafolio en GitHub Pages</a></li>
+      </ul>
     </div>
   </section>
 </main>
 
-<footer class="py-4 text-center" style="background:var(--g100)">
-  <small>© {{ year }}Falon Carmona</small>
+
+<footer class="py-4 text-center footer">
+  <img src="assets/logo-portafolio.svg" alt="Logo" class="logo-inline" />
+  <br />
+  <small>© {{ year }} Falon Carmona</small>
 </footer>
