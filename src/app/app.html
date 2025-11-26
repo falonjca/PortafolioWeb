@@ -1,18 +1,22 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="#top">{{ nombre }}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+    <button class="navbar-toggler" type="button" data-ƒbs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div id="nav" class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto align-items-lg-center">
          <div class="d-flex align-items-center gap-3 socials">
-          <a class="bi bi-envelope" title="Email" href="mailto:faloncarmona@gmail.com"></a>
-          <a class="bi bi-github" title="GitHub" target="_blank" rel="noopener"
-             href="https://github.com/falonjca"></a>
-          <a class="bi bi-linkedin" title="LinkedIn" target="_blank" rel="noopener" href="#"></a>
-          <a class="bi bi-whatsapp" title="WhatsApp" target="_blank" rel="noopener"
-             href="https://wa.me/50688555768"></a>
+          <a title="GitHub" target="_blank" rel="noopener" href="https://github.com/falonjca">
+            <i class="bi bi-github"></i>
+          </a>   
+          <a title="WhatsApp" target="_blank" rel="noopener" href="https://wa.me/50688555768">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a title="Email" href="mailto:faloncarmona@gmail.com">
+            <i class="bi bi-envelope"></i>
+          </a>
+
         </div>
 
         <li class="nav-item"><a href="#inicio" class="nav-link">Inicio</a></li>
@@ -33,11 +37,18 @@
   <!-- Texto --> 
 
    <div class="col-lg-7 order-2 order-lg-1"> 
-      <h1 class="display-5 fw-bold mb-2 d-flex align-items-center gap-3 flex-wrap">
+     <h1 class="display-5 fw-bold hero-title d-flex align-items-center gap-3 flex-wrap">
         <span>Hola, soy <span class="mark">Falon Carmona</span></span>
       </h1>
-      <span class="fade-80 fs-4 d-block">Ingeniera en software</span>
-      <p class="lead fade-80 mb-4 maxw-600"> Especializada en backend y metodologías ágiles. Diseño y mejoro soluciones empresariales para gobierno con <strong>calidad, seguridad y trazabilidad</strong>. </p> 
+      
+
+      <span class="tag-rol">Ingeniera en Software</span>
+
+      <p class="perfil-resaltado">
+        Especializada en backend y metodologías ágiles.  
+        Diseño y mejoro soluciones empresariales para gobierno con  
+        <strong>calidad, seguridad y trazabilidad</strong>.
+      </p>
       
       <div class="d-flex flex-wrap gap-3 mb-4">
        <a class="btn btn-primary btn-lg" href="assets/Cv-espanol.pdf" download>
@@ -54,7 +65,7 @@
       <!-- Foto -->
       <div class="col-lg-5 order-1 order-lg-2 text-center">
         <div class="photo-wrap">
-          <img src="assets/falon-foto.jpg" alt="Falon Carmona" class="photo" />
+          <img src="assets/falon1.png" alt="Falon Carmona" class="photo" />
           <span class="orb orb-1"></span>
           <span class="orb orb-2"></span>
         </div>
@@ -63,6 +74,14 @@
   </div>
 </section>
 
+<!-- PREGUNTA / SECCIÓN PUENTE -->
+<section id="ayuda" class="section question-band text-center">
+  <div class="container">
+    <span class="pregunta-ayuda">
+      ¿Cómo puedo ayudarle?
+    </span>
+  </div>
+</section>
 
 <!-- STATS-->
 <section id="stats" class="stats-band">
@@ -90,7 +109,6 @@
   </div>
 </section>
 
-
 <!-- MICROINTERACCION -->
 <section class="section">
   <div class="container d-flex flex-column align-items-center" style="max-width: 720px">
@@ -103,13 +121,61 @@
   </div>
 </section>
 
+<section id="frase" class="section text-center">
+  <div class="container position-relative">
+    <i class="bi bi-quote fs-1 text-primary open-quote"></i>
+    <blockquote class="frase-text mx-auto">
+      “Creo en el poder del software para mejorar la vida de las personas 
+      y fortalecer los servicios públicos.”
+    </blockquote>
+    <i class="bi bi-quote text-primary close-quote"></i>
+  </div>
+</section>
+
+
+<!-- MISIÓN / VISIÓN -->
+<section id="mision-vision" class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">Misión y Visión</h2>
+
+    <div class="row g-4">
+      <!-- Misión -->
+      <div class="col-12 col-lg-6">
+        <article class="card p-4 lift h-100" aria-labelledby="mv-mision">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="badge year" aria-hidden="true">Misión</span>
+          </div>
+          <p class="mb-0 fade-80">
+            Diseñar, desarrollar y optimizar soluciones backend
+            seguras, trazables y escalables para el sector público,
+            aplicando metodologías ágiles y buenas prácticas de ingeniería.
+          </p>
+        </article>
+      </div>
+
+      <!-- Visión -->
+      <div class="col-12 col-lg-6">
+        <article class="card p-4 lift h-100" aria-labelledby="mv-vision">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <span class="badge year" aria-hidden="true">Visión</span>
+          </div>
+          <p class="mb-0 fade-80">
+            Ser referente en ingeniería de software para el gobierno digital en Latinoamérica,
+            liderando iniciativas de modernización tecnológica que eleven la confiabilidad,
+            la seguridad y la transparencia de los servicios públicos.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <!-- PROYECTOS -->
  <section id="proyectos" class="section">
   <div class="container">
     <div class="d-flex align-items-center justify-content-between mb-3">
-      <h2 class="m-0">Proyectos</h2>
+      <h2 class="m-0">Principales Proyectos</h2>
       <div class="d-flex gap-2">
         <button class="btn btn-outline-dark btn-sm" (click)="scrollCarousel('prev')" aria-label="Anterior">
           ‹
@@ -130,7 +196,6 @@
         <div class="d-flex flex-wrap gap-2 mb-3">
           <span class="badge tech" *ngFor="let t of p.tech">{{ t }}</span>
         </div>
-        <a class="link-primary" [href]="p.link">Saber más →</a>
       </article>
     </div>
   </div>

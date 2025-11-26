@@ -1,7 +1,7 @@
 import { Component, AfterViewInit, OnDestroy, ViewChild, ElementRef,  CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-declare const lottie: any; // expuesto por bodymovin
+declare const lottie: any; 
 
 @Component({
   selector: 'app-root',

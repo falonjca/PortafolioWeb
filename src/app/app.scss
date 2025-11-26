@@ -8,7 +8,7 @@
 .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
 .reveal.in{ opacity:1; transform:none; }
 
-/* ==== HERO claro (fondo siempre blanco) ==== */
+/* ==== HERO  ==== */
 .hero{
   color: var(--g800);
   padding-top: 5rem; 
@@ -27,6 +27,17 @@
   left:auto; right:0; bottom:auto; top:0;
   background: radial-gradient(320px 200px at 90% 0%, rgba(73,48,207,.08), transparent 70%);
 }
+
+/* Separación entre título y rol */
+.hero-title{
+  margin-bottom: 1.8rem;   /* más aire debajo del "Hola, soy..." */
+}
+
+.tag-rol{
+  margin-bottom: 1.2rem;   /* separación del párrafo */
+  margin-top: .15rem;
+}
+
 
 .eyebrow{ letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:#4a5b7b; }
 .mark{ color: var(--blue); }
@@ -58,7 +69,7 @@
   border:1px solid rgba(31,41,55,.08);
   border-radius:16px; padding:.9rem; text-align:center;
 }
-.stat .n{ font-weight:800; font-size:1.20rem; color: var(--gold); }
+.stat .n{ font-weight:800; font-size:5.20rem; color: var(--gold); }
 .stat .t{ font-size:.8rem; opacity:.75; }
 
 /* Foto + orbes sutiles (tema claro) */
@@ -122,14 +133,30 @@
 }
 
 .slogan-inline {
-  height: 100;
+  height: 150px;              /* tamaño base en pantallas grandes */
   width: auto;
-  vertical-align: center;
+  display: block;
+  margin: 1rem auto 2rem;    /* centrado y con margen arriba/abajo */
   transition: transform 0.3s ease;
 }
 
 .slogan-inline:hover {
   transform: scale(1.05);
+}
+
+/* 🔸 Responsividad */
+@media (max-width: 992px) {   /* tablets */
+  .slogan-inline {
+    height: 60px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {   /* móviles */
+  .slogan-inline {
+    height: 45px;
+    margin-bottom: 1rem;
+  }
 }
 
 /* Franja full-width para stats */
@@ -149,17 +176,230 @@
 }
 .stat-bleed{
   display:inline-block;
-  min-width: 220px;
+  min-width: 250px;
   background:#fff;
   border:1px solid rgba(31,41,55,.08);
   border-radius:16px;
   padding:1rem 1.25rem;
   box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
-.stat .n{ font-weight:800; font-size:1.15rem; color: var(--blue); }
-.stat .t{ font-size:.9rem; opacity:.75; }
+.stat .n{ font-weight:800; font-size:2.15rem; color: var(--blue); }
+.stat .t{ font-size:1.2rem; opacity:.75; }
 
 /* Responsivo */
 @media (max-width: 768px){
   .stat-bleed{ width: 85%; }
+}
+/* ===== Misión / Visión ===== */
+#mision-vision h2{
+  position: relative;
+  display: inline-block;
+  padding-inline: .5rem;
+}
+#mision-vision h2::after{
+  content:"";
+  display:block;
+  height:4px;
+  width:60%;
+  margin:.4rem auto 0;
+  background: linear-gradient(90deg, var(--blue), var(--indigo));
+  border-radius:4px;
+  font-size: 2.75rem;
+}
+
+/* Ajustes sutiles a las cards de esta sección */
+#mision-vision .card{
+  background: var(--g100);
+  border: 1px solid rgba(31,41,55,.08);
+}
+#mision-vision .badge.year{
+  background: var(--gold);
+  color: #111;
+  font-weight: 700;
+}
+
+/* ==== Mejora de títulos y textos de Misión / Visión ==== */
+#mision-vision .card .badge.year{
+  font-size: 1.05rem;         /* más grande */
+  padding: .45rem .9rem;
+  border-radius: 12px;
+  letter-spacing: .5px;
+}
+
+/* Texto dentro de la card */
+#mision-vision .card p{
+  font-size: 1.08rem;         /* subimos tamaño */
+  line-height: 1.55;          /* más espacio entre líneas */
+  color: var(--g800);         /* más oscuro que fade-80 */
+  font-weight: 400;
+}
+
+/* Menor opacidad del fade-80 en esta sección para que no se vea tan tenue */
+#mision-vision .card .fade-80{
+  opacity: .9;
+}
+
+/* Responsive: ajustar en pantallas pequeñas */
+@media (max-width: 768px){
+  #mision-vision .card p{
+    font-size: 1rem;
+  }
+  #mision-vision .card .badge.year{
+    font-size: .95rem;
+    padding: .35rem .75rem;
+  }
+}
+
+
+/* === FRASE PERSONAL === */
+#frase {
+  background: var(--g100);
+  padding: 5rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+#frase::before,
+#frase::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(73, 48, 207, 0.15), transparent);
+  z-index: 0;
+}
+#frase::before {
+  top: -60px;
+  left: -60px;
+}
+#frase::after {
+  bottom: -60px;
+  right: -60px;
+}
+
+.frase-text {
+  position: relative;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 800px;
+  color: var(--g800);
+  z-index: 1;
+}
+
+.open-quote,
+.close-quote {
+  position: absolute;
+  color: var(--green);
+  opacity: 0.25;
+  z-index: 0;
+}
+.open-quote {
+  top: -10px;
+  left: 25%;
+}
+.close-quote {
+  bottom: 10px;
+  right: 25%;
+  transform: rotate(180deg);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .frase-text {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+  }
+  .open-quote,
+  .close-quote {
+    opacity: 0.15;
+  }
+}
+/* ===== ROL RESALTADO ===== */
+.tag-rol {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  background: var(--gold);
+  color: #111;
+  padding: .4rem .85rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,.1);
+}
+
+/* ===== PÁRRAFO DESTACADO ===== */
+.perfil-resaltado {
+  font-size: 1.28rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 620px;
+  padding: 1rem 1.25rem;
+  border-left: 5px solid var(--blue);
+  border-radius: .5rem;
+  background: linear-gradient(90deg, rgba(48,103,207,.06), transparent);
+  color: var(--g800);
+}
+
+/* MÁS FUERTE EL STRONG */
+.perfil-resaltado strong {
+  color: var(--indigo);
+  font-weight: 700;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .perfil-resaltado {
+    font-size: 1.05rem;
+    padding: .8rem 1rem;
+  }
+  .tag-rol {
+    font-size: .9rem;
+  }
+}
+
+/* Sección "¿Cómo puedo ayudarle?" */
+.question-band{
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pregunta-ayuda{
+  display: inline-block;
+  font-size: 2.15rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--g800);
+  padding: .2rem 1.4rem .3rem;
+  border-radius: 999px;
+  background: rgba(207,152,48,.08);         
+  border: 1px solid rgba(207,152,48,.35);
+}
+
+
+@media (max-width: 768px){
+  .pregunta-ayuda{
+    font-size: 1rem;
+    padding: .3rem 1.1rem .5rem;
+  }
+}
+.socials a{
+  font-size: 1.25rem;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.socials a:hover{
+  background: rgba(48,103,207,.1);
+  color: var(--gold);
 }
